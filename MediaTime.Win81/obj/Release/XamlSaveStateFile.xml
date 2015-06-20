@@ -1,0 +1,12 @@
+<XamlCompilerSaveState>
+  <ReferenceAssemblyList>
+    <LocalAssembly PathName="d:\copy\workspace\solutions\mediatime\application\mediatime\mediatime.win81\obj\release\intermediatexaml\mediatime.win81.exe" HashGuid="81bea6ee-8a79-8d3e-1f2d-3e66323db280" />
+    <ReferenceAssembly PathName="d:\copy\workspace\solutions\mediatime\application\mediatime\packages\mvvmcross.hottuna.crosscore.3.1.1\lib\netcore45\cirrious.crosscore.dll" HashGuid="ccf28a4c-2c17-ea97-8807-aa6e295d120f" />
+    <ReferenceAssembly PathName="d:\copy\workspace\solutions\mediatime\application\mediatime\packages\mvvmcross.hottuna.crosscore.3.1.1\lib\netcore45\cirrious.crosscore.windowsstore.dll" HashGuid="f97ceb8d-2817-bc90-624e-9280927ae311" />
+    <ReferenceAssembly PathName="d:\copy\workspace\solutions\mediatime\application\mediatime\packages\mvvmcross.hottuna.mvvmcrosslibraries.3.1.1\lib\netcore45\cirrious.mvvmcross.dll" HashGuid="24618852-aa19-02c1-8522-2d70f52bb060" />
+    <ReferenceAssembly PathName="d:\copy\workspace\solutions\mediatime\application\mediatime\packages\mvvmcross.hottuna.crosscore.3.1.1\lib\netcore45\cirrious.mvvmcross.localization.dll" HashGuid="cc169ebc-6f40-271e-a9fe-e2fe4b3425db" />
+    <ReferenceAssembly PathName="d:\copy\workspace\solutions\mediatime\application\mediatime\packages\mvvmcross.hottuna.plugin.messenger.3.1.1\lib\netcore45\cirrious.mvvmcross.plugins.messenger.dll" HashGuid="4c0f39cc-3f1a-b215-c996-a457ed2b2eaa" />
+    <ReferenceAssembly PathName="d:\copy\workspace\solutions\mediatime\application\mediatime\packages\mvvmcross.hottuna.mvvmcrosslibraries.3.1.1\lib\netcore45\cirrious.mvvmcross.windowsstore.dll" HashGuid="6d01fdd3-1f66-17c5-1139-f53c76052aa7" />
+    <ReferenceAssembly PathName="d:\copy\workspace\solutions\mediatime\application\mediatime\mediatime.core\bin\release\mediatime.core.dll" HashGuid="e95eecf2-92bd-53f9-22a0-fbadb895b114" />
+  </ReferenceAssemblyList>
+</XamlCompilerSaveState>

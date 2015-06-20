@@ -1,0 +1,16 @@
+﻿<Deployment xmlns="http://schemas.microsoft.com/client/2007/deployment" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" EntryPointAssembly="MediaTime.WindowsPhone8" EntryPointType="MediaTime.WindowsPhone8.App" RuntimeVersion="4.7.50308.0">
+  <Deployment.Parts>
+    <AssemblyPart x:Name="MediaTime.WindowsPhone8" Source="MediaTime.WindowsPhone8.dll" />
+    <AssemblyPart x:Name="Cirrious.CrossCore" Source="Cirrious.CrossCore.dll" />
+    <AssemblyPart x:Name="Cirrious.CrossCore.WindowsPhone" Source="Cirrious.CrossCore.WindowsPhone.dll" />
+    <AssemblyPart x:Name="Cirrious.MvvmCross" Source="Cirrious.MvvmCross.dll" />
+    <AssemblyPart x:Name="Cirrious.MvvmCross.Localization" Source="Cirrious.MvvmCross.Localization.dll" />
+    <AssemblyPart x:Name="Cirrious.MvvmCross.Plugins.Messenger" Source="Cirrious.MvvmCross.Plugins.Messenger.dll" />
+    <AssemblyPart x:Name="Cirrious.MvvmCross.WindowsPhone" Source="Cirrious.MvvmCross.WindowsPhone.dll" />
+    <AssemblyPart x:Name="MediaTime.Core" Source="MediaTime.Core.dll" />
+    <AssemblyPart x:Name="HtmlAgilityPack-PCL" Source="HtmlAgilityPack-PCL.dll" />
+    <AssemblyPart x:Name="Cirrious.MvvmCross.Plugins.Json" Source="Cirrious.MvvmCross.Plugins.Json.dll" />
+    <AssemblyPart x:Name="System.Windows.Interactivity" Source="System.Windows.Interactivity.dll" />
+    <AssemblyPart x:Name="Newtonsoft.Json" Source="Newtonsoft.Json.dll" />
+  </Deployment.Parts>
+</Deployment>

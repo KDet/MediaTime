@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>DIMA</Machine>
+    <WindowsUser>Dima</WindowsUser>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>f2ef6460-6e43-45f9-b435-2a6884a93814</PackageIdentityName>
+    <RegisteredManifestChecksum>73BA7CD2515C804BA279734F5376C2A0850AC915B94D664195E8B3BDB430F0E7</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>f2ef6460-6e43-45f9-b435-2a6884a93814_1.0.0.0_neutral__h2qzzvcpwqeye</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>f2ef6460-6e43-45f9-b435-2a6884a93814_h2qzzvcpwqeye!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>f2ef6460-6e43-45f9-b435-2a6884a93814</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=Dima</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="D:\Copy\Workspace\Solutions\MediaTime\Application\MediaTime\MediaTime.Win81\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-03-22T19:34:25.596</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="D:\Copy\Workspace\Solutions\MediaTime\Application\MediaTime\MediaTime.Win81\bin\Debug\MediaTime.Win81.exe">
+      <PackagePath>MediaTime.Win81.exe</PackagePath>
+      <Modified>2014-03-23T16:52:05.393</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Copy\Workspace\Solutions\MediaTime\Application\MediaTime\packages\MvvmCross.HotTuna.CrossCore.3.1.1\lib\netcore45\Cirrious.CrossCore.dll">
+      <PackagePath>Cirrious.CrossCore.dll</PackagePath>
+      <Modified>2014-03-22T15:38:28.139</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Copy\Workspace\Solutions\MediaTime\Application\MediaTime\packages\MvvmCross.HotTuna.CrossCore.3.1.1\lib\netcore45\Cirrious.CrossCore.WindowsStore.dll">
+      <PackagePath>Cirrious.CrossCore.WindowsStore.dll</PackagePath>
+      <Modified>2014-03-22T15:38:28.141</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Copy\Workspace\Solutions\MediaTime\Application\MediaTime\packages\MvvmCross.HotTuna.MvvmCrossLibraries.3.1.1\lib\netcore45\Cirrious.MvvmCross.dll">
+      <PackagePath>Cirrious.MvvmCross.dll</PackagePath>
+      <Modified>2014-03-22T15:38:28.420</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Copy\Workspace\Solutions\MediaTime\Application\MediaTime\packages\MvvmCross.HotTuna.CrossCore.3.1.1\lib\netcore45\Cirrious.MvvmCross.Localization.dll">
+      <PackagePath>Cirrious.MvvmCross.Localization.dll</PackagePath>
+      <Modified>2014-03-22T15:38:28.144</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Copy\Workspace\Solutions\MediaTime\Application\MediaTime\packages\MvvmCross.HotTuna.Plugin.Messenger.3.1.1\lib\netcore45\Cirrious.MvvmCross.Plugins.Messenger.dll">
+      <PackagePath>Cirrious.MvvmCross.Plugins.Messenger.dll</PackagePath>
+      <Modified>2014-03-22T15:38:46.989</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Copy\Workspace\Solutions\MediaTime\Application\MediaTime\packages\MvvmCross.HotTuna.MvvmCrossLibraries.3.1.1\lib\netcore45\Cirrious.MvvmCross.WindowsStore.dll">
+      <PackagePath>Cirrious.MvvmCross.WindowsStore.dll</PackagePath>
+      <Modified>2014-03-22T15:38:28.422</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Copy\Workspace\Solutions\MediaTime\Application\MediaTime\MediaTime.Core\bin\Debug\MediaTime.Core.dll">
+      <PackagePath>MediaTime.Core.dll</PackagePath>
+      <Modified>2014-03-23T16:44:02.139</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Copy\Workspace\Solutions\MediaTime\Application\MediaTime\MediaTime.Core\bin\Debug\HtmlAgilityPack-PCL.dll">
+      <PackagePath>HtmlAgilityPack-PCL.dll</PackagePath>
+      <Modified>2014-03-22T15:37:50.374</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Copy\Workspace\Solutions\MediaTime\Application\MediaTime\MediaTime.Core\bin\Debug\Cirrious.MvvmCross.Plugins.Json.dll">
+      <PackagePath>Cirrious.MvvmCross.Plugins.Json.dll</PackagePath>
+      <Modified>2014-03-22T15:38:43.549</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Copy\Workspace\Solutions\MediaTime\Application\MediaTime\MediaTime.Core\bin\Debug\Newtonsoft.Json.dll">
+      <PackagePath>Newtonsoft.Json.dll</PackagePath>
+      <Modified>2014-03-22T15:38:43.554</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Copy\Workspace\Solutions\MediaTime\Application\MediaTime\MediaTime.Win81\Assets\Background2x.jpg">
+      <PackagePath>Assets\Background2x.jpg</PackagePath>
+      <Modified>2014-01-26T14:51:20.969</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Copy\Workspace\Solutions\MediaTime\Application\MediaTime\MediaTime.Win81\Assets\background2xefect.jpg">
+      <PackagePath>Assets\background2xefect.jpg</PackagePath>
+      <Modified>2014-02-02T14:01:14.075</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Copy\Workspace\Solutions\MediaTime\Application\MediaTime\MediaTime.Win81\Assets\background2xlight.jpg">
+      <PackagePath>Assets\background2xlight.jpg</PackagePath>
+      <Modified>2014-02-02T14:23:20.586</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Copy\Workspace\Solutions\MediaTime\Application\MediaTime\MediaTime.Win81\Assets\Background2x.png">
+      <PackagePath>Assets\Background2x.png</PackagePath>
+      <Modified>2014-01-26T14:34:11.692</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Copy\Workspace\Solutions\MediaTime\Application\MediaTime\MediaTime.Win81\Assets\DarkGray.png">
+      <PackagePath>Assets\DarkGray.png</PackagePath>
+      <Modified>2014-01-21T23:09:32.011</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Copy\Workspace\Solutions\MediaTime\Application\MediaTime\MediaTime.Win81\Assets\FsToLogo.png">
+      <PackagePath>Assets\FsToLogo.png</PackagePath>
+      <Modified>2014-01-26T12:22:33.650</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Copy\Workspace\Solutions\MediaTime\Application\MediaTime\MediaTime.Win81\Assets\LightGray.png">
+      <PackagePath>Assets\LightGray.png</PackagePath>
+      <Modified>2014-01-21T23:09:32.045</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Copy\Workspace\Solutions\MediaTime\Application\MediaTime\MediaTime.Win81\Assets\Logo.scale-100.png">
+      <PackagePath>Assets\Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2013-07-23T04:01:02.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Copy\Workspace\Solutions\MediaTime\Application\MediaTime\MediaTime.Win81\Assets\MediumGray.png">
+      <PackagePath>Assets\MediumGray.png</PackagePath>
+      <Modified>2014-01-21T23:09:32.044</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Copy\Workspace\Solutions\MediaTime\Application\MediaTime\MediaTime.Win81\Assets\No_Poster.png">
+      <PackagePath>Assets\No_Poster.png</PackagePath>
+      <Modified>2014-02-15T17:56:04.406</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Copy\Workspace\Solutions\MediaTime\Application\MediaTime\MediaTime.Win81\Assets\SmallLogo.scale-100.png">
+      <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2013-07-23T04:01:02.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Copy\Workspace\Solutions\MediaTime\Application\MediaTime\MediaTime.Win81\Assets\SplashScreen.scale-100.png">
+      <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2013-07-23T04:01:02.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Copy\Workspace\Solutions\MediaTime\Application\MediaTime\MediaTime.Win81\Assets\StoreLogo.scale-100.png">
+      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2013-07-23T04:01:02.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Copy\Workspace\Solutions\MediaTime\Application\MediaTime\MediaTime.Win81\Assets\testTitle.png">
+      <PackagePath>Assets\testTitle.png</PackagePath>
+      <Modified>2014-01-26T00:36:12.157</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Copy\Workspace\Solutions\MediaTime\Application\MediaTime\MediaTime.Win81\Assets\ThumbsDown.png">
+      <PackagePath>Assets\ThumbsDown.png</PackagePath>
+      <Modified>2014-02-15T17:05:25.128</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Copy\Workspace\Solutions\MediaTime\Application\MediaTime\MediaTime.Win81\Assets\ThumbsUp.png">
+      <PackagePath>Assets\ThumbsUp.png</PackagePath>
+      <Modified>2014-02-15T17:08:35.284</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Copy\Workspace\Solutions\MediaTime\Application\MediaTime\MediaTime.Win81\Common\ReadMe.txt">
+      <PackagePath>Common\ReadMe.txt</PackagePath>
+      <Modified>2014-01-21T23:09:32.068</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Copy\Workspace\Solutions\MediaTime\Application\MediaTime\MediaTime.Win81\ToDo-MvvmCross\_ Windows Store UI.txt">
+      <PackagePath>ToDo-MvvmCross\_ Windows Store UI.txt</PackagePath>
+      <Modified>2014-03-22T15:40:36.882</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Copy\Workspace\Solutions\MediaTime\Application\MediaTime\MediaTime.Win81\bin\Debug\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+      <Modified>2014-03-22T17:53:14.224</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Copy\Workspace\Solutions\MediaTime\Application\MediaTime\MediaTime.Win81\bin\Debug\Common\Templates.xbf">
+      <PackagePath>Common\Templates.xbf</PackagePath>
+      <Modified>2014-03-22T17:53:14.225</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Copy\Workspace\Solutions\MediaTime\Application\MediaTime\MediaTime.Win81\bin\Debug\Views\CategoryView.xbf">
+      <PackagePath>Views\CategoryView.xbf</PackagePath>
+      <Modified>2014-03-22T17:53:14.226</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Copy\Workspace\Solutions\MediaTime\Application\MediaTime\MediaTime.Win81\bin\Debug\Views\HomeView.xbf">
+      <PackagePath>Views\HomeView.xbf</PackagePath>
+      <Modified>2014-03-23T16:52:04.788</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Copy\Workspace\Solutions\MediaTime\Application\MediaTime\MediaTime.Win81\bin\Debug\Views\ItemPage.xbf">
+      <PackagePath>Views\ItemPage.xbf</PackagePath>
+      <Modified>2014-03-22T17:58:09.595</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Copy\Workspace\Solutions\MediaTime\Application\MediaTime\MediaTime.Win81\bin\Debug\Views\MediaItemView.xbf">
+      <PackagePath>Views\MediaItemView.xbf</PackagePath>
+      <Modified>2014-03-22T17:53:14.227</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Copy\Workspace\Solutions\MediaTime\Application\MediaTime\MediaTime.Win81\bin\Debug\Views\SectionPage.xbf">
+      <PackagePath>Views\SectionPage.xbf</PackagePath>
+      <Modified>2014-03-22T17:58:09.595</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Copy\Workspace\Solutions\MediaTime\Application\MediaTime\MediaTime.Win81\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2014-03-22T19:34:25.121</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

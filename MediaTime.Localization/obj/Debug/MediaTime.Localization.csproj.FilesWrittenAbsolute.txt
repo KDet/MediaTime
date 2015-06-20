@@ -1,0 +1,9 @@
+/Users/dima/Documents/MediaTime/MediaTime.Localization/obj/Debug/.NETPortable,Version=v4.5,Profile=Profile78.AssemblyAttribute.cs
+/Users/dima/Documents/MediaTime/MediaTime.Localization/obj/Debug/MediaTime.Localization.Strings.resources
+/Users/dima/Documents/MediaTime/MediaTime.Localization/obj/Debug/MediaTime.Localization.Strings.de-DE.resources
+/Users/dima/Documents/MediaTime/MediaTime.Localization/obj/Debug/de-DE/MediaTime.Localization.resources.dll
+/Users/dima/Documents/MediaTime/MediaTime.Localization/bin/Debug/MediaTime.Localization.dll.mdb
+/Users/dima/Documents/MediaTime/MediaTime.Localization/bin/Debug/MediaTime.Localization.dll
+/Users/dima/Documents/MediaTime/MediaTime.Localization/bin/Debug//de-DE/MediaTime.Localization.resources.dll
+/Users/dima/Documents/MediaTime/MediaTime.Localization/obj/Debug/MediaTime.Localization.dll
+/Users/dima/Documents/MediaTime/MediaTime.Localization/obj/Debug/MediaTime.Localization.dll.mdb

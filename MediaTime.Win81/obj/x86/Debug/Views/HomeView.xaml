@@ -1,0 +1,537 @@
+﻿<views:BaseView
+    x:Name="PageRoot"
+    x:Class="MediaTime.Win81.Views.HomeView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModels="using:MediaTime.Core.ViewModels"
+    xmlns:views="using:MediaTime.Win81.Views"
+    xmlns:common="using:MediaTime.Win81.Common"
+    mc:Ignorable="d" RequestedTheme="Light">
+    <views:BaseView.Resources>
+        <Style x:Key="SubCategoryAppBarButtonStyle" TargetType="AppBarButton">
+            <Setter Property="Foreground" Value="{ThemeResource AppBarItemForegroundThemeBrush}"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="FontFamily" Value="{ThemeResource ContentControlThemeFontFamily}"/>
+            <Setter Property="FontWeight" Value="Normal"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="AppBarButton">
+                        <Grid x:Name="RootGrid" Background="Transparent" RenderTransformOrigin="0.5,0.5" >
+                            <Grid.Projection>
+                                <PlaneProjection/>
+                            </Grid.Projection>
+                            <Grid.RenderTransform>
+                                <CompositeTransform/>
+                            </Grid.RenderTransform>
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="ApplicationViewStates">
+                                    <VisualState x:Name="FullSize"/>
+                                    <VisualState x:Name="Compact">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Visibility" Storyboard.TargetName="TextLabel">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="Collapsed"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Width" Storyboard.TargetName="RootGrid">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="75"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                </VisualStateGroup>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal"/>
+                                    <VisualState x:Name="PointerOver">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Foreground" Storyboard.TargetName="Content">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource AppBarItemPointerOverForegroundThemeBrush}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <DoubleAnimation Duration="0:0:0.2" To="1.1" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="RootGrid" d:IsOptimized="True"/>
+                                            <DoubleAnimation Duration="0:0:0.2" To="1.1" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="RootGrid" d:IsOptimized="True"/>
+                                            <DoubleAnimation Duration="0:0:0.2" To="1.1" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="grid" d:IsOptimized="True"/>
+                                            <DoubleAnimation Duration="0:0:0.2" To="1.1" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="grid" d:IsOptimized="True"/>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(TextBlock.FontWeight)" Storyboard.TargetName="TextLabel">
+                                            </ObjectAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Pressed">
+                                        <Storyboard AutoReverse="True">
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Stroke" Storyboard.TargetName="OutlineEllipse">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource AppBarItemForegroundThemeBrush}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Foreground" Storyboard.TargetName="Content">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource AppBarItemPressedForegroundThemeBrush}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <DoubleAnimation Duration="0:0:0.2" To="1.1" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="grid" d:IsOptimized="True"/>
+                                            <DoubleAnimation Duration="0:0:0.2" To="1.1" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="grid" d:IsOptimized="True"/>
+                                            <DoubleAnimation Duration="0:0:0.2" To="30" Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.GlobalOffsetX)" Storyboard.TargetName="RootGrid" d:IsOptimized="True"/>
+                                            <DoubleAnimation Duration="0:0:0.2" To="0" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.Rotation)" Storyboard.TargetName="grid1" d:IsOptimized="True"/>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Disabled">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Stroke" Storyboard.TargetName="OutlineEllipse">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource AppBarItemDisabledForegroundThemeBrush}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Foreground" Storyboard.TargetName="Content">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource AppBarItemDisabledForegroundThemeBrush}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Foreground" Storyboard.TargetName="TextLabel">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource AppBarItemDisabledForegroundThemeBrush}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                </VisualStateGroup>
+                                <VisualStateGroup x:Name="FocusStates">
+                                    <VisualState x:Name="Focused">
+                                        <Storyboard>
+                                            <DoubleAnimation Duration="0" To="1" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="FocusVisualWhite"/>
+                                            <DoubleAnimation Duration="0" To="1" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="FocusVisualBlack"/>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Unfocused"/>
+                                    <VisualState x:Name="PointerFocused"/>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <Grid x:Name="grid" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" >
+                                <Grid.RenderTransform>
+                                    <CompositeTransform/>
+                                </Grid.RenderTransform>
+                                <Grid.Projection>
+                                    <PlaneProjection/>
+                                </Grid.Projection>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Grid x:Name="grid1" HorizontalAlignment="Center" RenderTransformOrigin="0.5,0.5" Height="75" Width="75">
+                                    <Grid.RenderTransform>
+                                        <CompositeTransform/>
+                                    </Grid.RenderTransform>
+                                    <Ellipse x:Name="BackgroundEllipse" Fill="{ThemeResource AppBarItemBackgroundThemeBrush}" Height="75" UseLayoutRounding="False" Width="75" StrokeThickness="3"/>
+                                    <Ellipse x:Name="OutlineEllipse" Height="75" Stroke="{ThemeResource AppBarItemForegroundThemeBrush}" StrokeThickness="4" UseLayoutRounding="False" Width="75" Fill="{ThemeResource AppBarItemBackgroundThemeBrush}"/>
+                                    <ContentPresenter x:Name="Content" AutomationProperties.AccessibilityView="Raw" Content="{TemplateBinding Icon}" Foreground="{TemplateBinding Foreground}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                </Grid>
+                                <TextBlock x:Name="TextLabel" Foreground="{ThemeResource AppBarItemForegroundThemeBrush}" TextAlignment="Center" TextWrapping="Wrap" Text="{TemplateBinding Label}" VerticalAlignment="Center" Grid.Column="1" Margin="13,14" Style="{StaticResource SubheaderTextBlockStyle}" FontSize="29.333" FontFamily="Segoe UI" FontWeight="Normal" />
+                            </Grid>
+                            <Rectangle x:Name="FocusVisualWhite" IsHitTestVisible="False" Opacity="0" StrokeDashOffset="1.5" StrokeEndLineCap="Square" Stroke="{ThemeResource FocusVisualWhiteStrokeThemeBrush}" StrokeDashArray="1,1"/>
+                            <Rectangle x:Name="FocusVisualBlack" IsHitTestVisible="False" Opacity="0" StrokeDashOffset="0.5" StrokeEndLineCap="Square" Stroke="{ThemeResource FocusVisualBlackStrokeThemeBrush}" StrokeDashArray="1,1"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="CategoryAppBarButtonStyle" TargetType="AppBarButton">
+            <Setter Property="Foreground" Value="{ThemeResource AppBarItemForegroundThemeBrush}"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="FontFamily" Value="{ThemeResource ContentControlThemeFontFamily}"/>
+            <Setter Property="FontWeight" Value="Normal"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="AppBarButton">
+                        <Grid x:Name="RootGrid" Background="Transparent" RenderTransformOrigin="0.5,0.5" >
+                            <Grid.Projection>
+                                <PlaneProjection/>
+                            </Grid.Projection>
+                            <Grid.RenderTransform>
+                                <CompositeTransform/>
+                            </Grid.RenderTransform>
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="ApplicationViewStates">
+                                    <VisualState x:Name="FullSize"/>
+                                    <VisualState x:Name="Compact">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Width" Storyboard.TargetName="RootGrid">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="75"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                </VisualStateGroup>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal"/>
+                                    <VisualState x:Name="PointerOver">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Foreground" Storyboard.TargetName="Content">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource AppBarItemPointerOverForegroundThemeBrush}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <DoubleAnimation Duration="0:0:0.2" To="1.1" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="RootGrid" d:IsOptimized="True"/>
+                                            <DoubleAnimation Duration="0:0:0.2" To="1.1" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="RootGrid" d:IsOptimized="True"/>
+                                            <DoubleAnimation Duration="0:0:0.2" To="1.1" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="grid" d:IsOptimized="True"/>
+                                            <DoubleAnimation Duration="0:0:0.2" To="1.1" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="grid" d:IsOptimized="True"/>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Pressed">
+                                        <Storyboard AutoReverse="True">
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Stroke" Storyboard.TargetName="OutlineEllipse">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource AppBarItemForegroundThemeBrush}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Foreground" Storyboard.TargetName="Content">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource AppBarItemPressedForegroundThemeBrush}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <DoubleAnimation Duration="0:0:0.2" To="1.1" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="grid" d:IsOptimized="True"/>
+                                            <DoubleAnimation Duration="0:0:0.2" To="1.1" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="grid" d:IsOptimized="True"/>
+                                            <DoubleAnimation Duration="0:0:0.2" To="30" Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.GlobalOffsetX)" Storyboard.TargetName="RootGrid" d:IsOptimized="True"/>
+                                            <DoubleAnimation Duration="0:0:0.2" To="0" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.Rotation)" Storyboard.TargetName="grid1" d:IsOptimized="True"/>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Disabled">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Stroke" Storyboard.TargetName="OutlineEllipse">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource AppBarItemDisabledForegroundThemeBrush}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Foreground" Storyboard.TargetName="Content">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource AppBarItemDisabledForegroundThemeBrush}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                </VisualStateGroup>
+                                <VisualStateGroup x:Name="FocusStates">
+                                    <VisualState x:Name="Focused">
+                                        <Storyboard>
+                                            <DoubleAnimation Duration="0" To="1" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="FocusVisualWhite"/>
+                                            <DoubleAnimation Duration="0" To="1" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="FocusVisualBlack"/>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Unfocused"/>
+                                    <VisualState x:Name="PointerFocused"/>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <Grid x:Name="grid" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" >
+                                <Grid.RenderTransform>
+                                    <CompositeTransform/>
+                                </Grid.RenderTransform>
+                                <Grid.Projection>
+                                    <PlaneProjection/>
+                                </Grid.Projection>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Grid x:Name="grid1" HorizontalAlignment="Center" RenderTransformOrigin="0.5,0.5" Height="200" Width="200">
+                                    <Grid.RenderTransform>
+                                        <CompositeTransform/>
+                                    </Grid.RenderTransform>
+                                    <Ellipse x:Name="BackgroundEllipse" Fill="{ThemeResource AppBarItemBackgroundThemeBrush}" Height="200" UseLayoutRounding="False" Width="200" StrokeThickness="3"/>
+                                    <Ellipse x:Name="OutlineEllipse" Height="200" Stroke="{ThemeResource AppBarItemForegroundThemeBrush}" StrokeThickness="4" UseLayoutRounding="False" Width="200" Fill="{ThemeResource AppBarItemBackgroundThemeBrush}"/>
+                                    <ContentPresenter x:Name="Content" AutomationProperties.AccessibilityView="Raw" Content="{TemplateBinding Icon}" Foreground="{TemplateBinding Foreground}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                </Grid>
+                            </Grid>
+                            <Rectangle x:Name="FocusVisualWhite" IsHitTestVisible="False" Opacity="0" StrokeDashOffset="1.5" StrokeEndLineCap="Square" Stroke="{ThemeResource FocusVisualWhiteStrokeThemeBrush}" StrokeDashArray="1,1"/>
+                            <Rectangle x:Name="FocusVisualBlack" IsHitTestVisible="False" Opacity="0" StrokeDashOffset="0.5" StrokeEndLineCap="Square" Stroke="{ThemeResource FocusVisualBlackStrokeThemeBrush}" StrokeDashArray="1,1"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </views:BaseView.Resources>
+    <views:BaseView.BottomAppBar>
+        <AppBar>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Orientation="Horizontal"/>
+                <StackPanel Grid.Column="1" HorizontalAlignment="Right" Orientation="Horizontal"/>
+                <AppBarButton Grid.Column="1" HorizontalAlignment="Right" Icon="Remove" Label="Remove from favorite" Margin="0,10,14,0" VerticalAlignment="Top" Command="{Binding RemoveFromeFavoriteCommand}"/>
+            </Grid>
+        </AppBar>
+    </views:BaseView.BottomAppBar>
+    <!--
+    This grid acts as a root panel for the page.
+  -->
+    <Grid>
+        <Grid.Background>
+            <ImageBrush Stretch="UniformToFill" ImageSource="ms-appx:///Assets/background2xlight.jpg"/>
+        </Grid.Background>
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+        <Hub >
+            <Hub.Background>
+                <LinearGradientBrush EndPoint="1,1" SpreadMethod="Reflect" StartPoint="0,0">
+                    <GradientStop Color="#7FFFFFFF"/>
+                    <GradientStop Color="#FFFEFFFF" Offset="1"/>
+                </LinearGradientBrush>
+            </Hub.Background>
+            <Hub.Header>
+                <!-- Back button and page title -->
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="80"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Style="{StaticResource NavigationBackButtonNormalStyle}"
+                        Margin="-1,-1,39,0" 
+                        VerticalAlignment="Top"
+                        Command="{Binding NavigationHelper.GoBackCommand, ElementName=PageRoot}"
+                        AutomationProperties.Name="Back"
+                        AutomationProperties.AutomationId="BackButton"
+                        AutomationProperties.ItemType="Navigation Button"/>
+                    <TextBlock Text="{StaticResource AppName}" Style="{StaticResource HeaderTextBlockStyle}" Grid.Column="1" 
+                        VerticalAlignment="Top" IsHitTestVisible="false" TextWrapping="NoWrap" />
+                </Grid>
+            </Hub.Header>
+            <HubSection Header="{Binding Path=Strings.HomeViewModel_About, Source={StaticResource Strings},FallbackValue=About, Mode=OneWay}" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Top" Padding="80,40,40,44" >
+                <DataTemplate>
+                    <Grid Width="250">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <TextBlock Style="{StaticResource BodyTextBlockStyle}" Grid.Row="0" 
+    					 Text="{Binding Path=Strings.HomeViewModel_AboutText, Source={StaticResource Strings},FallbackValue=AboutText, Mode=OneWay}" Margin="0" TextAlignment="Justify" />
+
+                        <Button 
+                            Grid.Row="1" 
+                            Width="100" 
+                            Height="100" 
+                            Padding="0" 
+                            Margin="0,20,0,0" 
+                            VerticalAlignment="Top" 
+                            Command="{Binding GoToWebsiteCommand}"
+                            CommandParameter="http://brb.to/video/">
+                            <Button.Resources>
+                                <Style x:Key="LinkButtonStyle" TargetType="Button">
+                                    <Setter Property="Background" Value="{ThemeResource ButtonBackgroundThemeBrush}"/>
+                                    <Setter Property="Foreground" Value="{ThemeResource ButtonForegroundThemeBrush}"/>
+                                    <Setter Property="BorderBrush" Value="{ThemeResource ButtonBorderThemeBrush}"/>
+                                    <Setter Property="BorderThickness" Value="{ThemeResource ButtonBorderThemeThickness}"/>
+                                    <Setter Property="Padding" Value="12,4,12,4"/>
+                                    <Setter Property="HorizontalAlignment" Value="Left"/>
+                                    <Setter Property="VerticalAlignment" Value="Center"/>
+                                    <Setter Property="FontFamily" Value="{ThemeResource ContentControlThemeFontFamily}"/>
+                                    <Setter Property="FontWeight" Value="SemiBold"/>
+                                    <Setter Property="FontSize" Value="{ThemeResource ControlContentThemeFontSize}"/>
+                                    <Setter Property="Template">
+                                        <Setter.Value>
+                                            <ControlTemplate TargetType="Button">
+                                                <Grid x:Name="grid" RenderTransformOrigin="0.5,0.5">
+                                                    <Grid.Projection>
+                                                        <PlaneProjection/>
+                                                    </Grid.Projection>
+                                                    <Grid.RenderTransform>
+                                                        <CompositeTransform/>
+                                                    </Grid.RenderTransform>
+                                                    <VisualStateManager.VisualStateGroups>
+                                                        <VisualStateGroup x:Name="CommonStates">
+                                                            <VisualState x:Name="Normal"/>
+                                                            <VisualState x:Name="PointerOver">
+                                                                <Storyboard>
+                                                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Foreground" Storyboard.TargetName="ContentPresenter">
+                                                                        <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ButtonPointerOverForegroundThemeBrush}"/>
+                                                                    </ObjectAnimationUsingKeyFrames>
+                                                                </Storyboard>
+                                                            </VisualState>
+                                                            <VisualState x:Name="Pressed">
+                                                                <Storyboard>
+                                                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Foreground" Storyboard.TargetName="ContentPresenter">
+                                                                        <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ButtonPressedForegroundThemeBrush}"/>
+                                                                    </ObjectAnimationUsingKeyFrames>
+                                                                    <DoubleAnimation Duration="0:0:0.1" To="1.1" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="grid" d:IsOptimized="True"/>
+                                                                    <DoubleAnimation Duration="0:0:0.1" To="1.1" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="grid" d:IsOptimized="True"/>
+                                                                </Storyboard>
+                                                            </VisualState>
+                                                            <VisualState x:Name="Disabled">
+                                                                <Storyboard>
+                                                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Foreground" Storyboard.TargetName="ContentPresenter">
+                                                                        <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ButtonDisabledForegroundThemeBrush}"/>
+                                                                    </ObjectAnimationUsingKeyFrames>
+                                                                </Storyboard>
+                                                            </VisualState>
+                                                        </VisualStateGroup>
+                                                        <VisualStateGroup x:Name="FocusStates">
+                                                            <VisualState x:Name="Focused">
+                                                                <Storyboard>
+                                                                    <DoubleAnimation Duration="0" To="1" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="FocusVisualWhite"/>
+                                                                    <DoubleAnimation Duration="0" To="1" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="FocusVisualBlack"/>
+                                                                </Storyboard>
+                                                            </VisualState>
+                                                            <VisualState x:Name="Unfocused"/>
+                                                            <VisualState x:Name="PointerFocused"/>
+                                                        </VisualStateGroup>
+                                                    </VisualStateManager.VisualStateGroups>
+                                                    <ContentPresenter x:Name="ContentPresenter" AutomationProperties.AccessibilityView="Raw" ContentTemplate="{TemplateBinding ContentTemplate}" ContentTransitions="{TemplateBinding ContentTransitions}" Content="{TemplateBinding Content}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"  VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                                                    <Rectangle x:Name="FocusVisualWhite" IsHitTestVisible="False" Opacity="0" StrokeDashOffset="1.5" StrokeEndLineCap="Square" Stroke="{ThemeResource FocusVisualWhiteStrokeThemeBrush}" StrokeDashArray="1,1"/>
+                                                    <Rectangle x:Name="FocusVisualBlack" IsHitTestVisible="False" Opacity="0" StrokeDashOffset="0.5" StrokeEndLineCap="Square" Stroke="{ThemeResource FocusVisualBlackStrokeThemeBrush}" StrokeDashArray="1,1"/>
+                                                </Grid>
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Style>
+                            </Button.Resources>
+                            <Button.Style>
+                                <StaticResource ResourceKey="LinkButtonStyle"/>
+                            </Button.Style>
+                            <Image Source="ms-appx:///Assets/FsToLogo.png" Stretch="UniformToFill" />
+                        </Button>
+                    </Grid>
+                </DataTemplate>
+            </HubSection>
+            <HubSection 
+                Padding="80,40,40,44" >
+                <DataTemplate>
+                    <Grid >
+                        <AppBarButton  
+                            VerticalAlignment="Center" 
+                            Style="{StaticResource CategoryAppBarButtonStyle}" 
+                            Margin="-60,0,0,0"
+                            Command="{Binding GoToCategoryCommand}">
+                            <AppBarButton.CommandParameter>
+                                <viewModels:MediaMenuOptions>Video</viewModels:MediaMenuOptions>
+                            </AppBarButton.CommandParameter>
+                            <AppBarButton.Icon>
+                                <FontIcon 
+                                    Glyph="{Binding Path=Strings.HomeViewModel_Video, Source={StaticResource Strings},FallbackValue=Video, Mode=OneWay}" />
+                            </AppBarButton.Icon>
+                        </AppBarButton>
+                        <Grid 
+                            VerticalAlignment="Top" >
+                            <Grid.Transitions>
+                                <TransitionCollection>
+                                    <EntranceThemeTransition/>
+                                </TransitionCollection>
+                            </Grid.Transitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <AppBarButton 
+                                Label="{Binding Path=Strings.HomeViewModel_Films, Source={StaticResource Strings},FallbackValue=Films, Mode=OneWay}" 
+                                Style="{StaticResource SubCategoryAppBarButtonStyle}"
+                                Margin="0,0,0,-5" 
+                                Command="{Binding GoToSubCategoryCommand}">
+                                <AppBarButton.CommandParameter>
+                                    <viewModels:VideoMenuOptions>Films</viewModels:VideoMenuOptions>
+                                </AppBarButton.CommandParameter>
+                                <AppBarButton.Icon>
+                                    <FontIcon Glyph="F"/>
+                                </AppBarButton.Icon>
+                            </AppBarButton>
+                            <AppBarButton 
+                                Label="{Binding Path=Strings.HomeViewModel_Serials, Source={StaticResource Strings},FallbackValue=Serials, Mode=OneWay}"
+                                Style="{StaticResource SubCategoryAppBarButtonStyle}"
+                                Margin="100,0,0,0" 
+                                Grid.Row="1"
+                                Command="{Binding GoToSubCategoryCommand}">
+                                <AppBarButton.CommandParameter>
+                                    <viewModels:VideoMenuOptions>Serials</viewModels:VideoMenuOptions>
+                                </AppBarButton.CommandParameter>
+                                <AppBarButton.Icon>
+                                    <FontIcon Glyph="S"/>
+                                </AppBarButton.Icon>
+                            </AppBarButton>
+                            <AppBarButton 
+                                Label="{Binding Path=Strings.HomeViewModel_Cartoons, Source={StaticResource Strings},FallbackValue=Cartoons, Mode=OneWay}" 
+                                Style="{StaticResource SubCategoryAppBarButtonStyle}" 
+                                Margin="154,0,0,5" 
+                                Grid.Row="2">
+                                <AppBarButton.CommandParameter>
+                                    <viewModels:VideoMenuOptions>Cartoons</viewModels:VideoMenuOptions>
+                                </AppBarButton.CommandParameter>
+                                <AppBarButton.Icon>
+                                    <FontIcon Glyph="C"/>
+                                </AppBarButton.Icon>
+                            </AppBarButton>
+                            <AppBarButton 
+                                Label="{Binding Path=Strings.HomeViewModel_Cartoonserials, Source={StaticResource Strings},FallbackValue=Cartoonserials, Mode=OneWay}" 
+                                Style="{StaticResource SubCategoryAppBarButtonStyle}" 
+                                Margin="180,7,40,7" 
+                                Grid.Row="3">
+                                <AppBarButton.CommandParameter>
+                                    <viewModels:VideoMenuOptions>CartoonSerials</viewModels:VideoMenuOptions>
+                                </AppBarButton.CommandParameter>
+                                <AppBarButton.Icon>
+                                    <FontIcon Glyph="C"/>
+                                </AppBarButton.Icon>
+                            </AppBarButton>
+                            <AppBarButton 
+                                Label="{Binding Path=Strings.HomeViewModel_TVShows, Source={StaticResource Strings},FallbackValue=TV Shows, Mode=OneWay}"
+                                Style="{StaticResource SubCategoryAppBarButtonStyle}" 
+                                Margin="158,5,0,0" 
+                                Grid.Row="4">
+                                <AppBarButton.CommandParameter>
+                                    <viewModels:VideoMenuOptions>TvShow</viewModels:VideoMenuOptions>
+                                </AppBarButton.CommandParameter>
+                                <AppBarButton.Icon>
+                                    <FontIcon Glyph="T"/>
+                                </AppBarButton.Icon>
+                            </AppBarButton>
+                            <AppBarButton 
+                                Label="{Binding Path=Strings.HomeViewModel_Сlips, Source={StaticResource Strings},FallbackValue=Сlips, Mode=OneWay}"
+                                Style="{StaticResource SubCategoryAppBarButtonStyle}" 
+                                Margin="100,0,0,0" 
+                                Grid.Row="5" >
+                                <AppBarButton.CommandParameter>
+                                    <viewModels:VideoMenuOptions>Clips</viewModels:VideoMenuOptions>
+                                </AppBarButton.CommandParameter>
+                                <AppBarButton.Icon>
+                                    <FontIcon Glyph="C"/>
+                                </AppBarButton.Icon>
+                            </AppBarButton>
+                            <AppBarButton 
+                                Label="{Binding Path=Strings.HomeViewModel_Сoncerts, Source={StaticResource Strings},FallbackValue=Сoncerts, Mode=OneWay}"
+                                Style="{StaticResource SubCategoryAppBarButtonStyle}" 
+                                Margin="0,-5,0,0" 
+                                Grid.Row="6">
+                                <AppBarButton.CommandParameter>
+                                    <viewModels:VideoMenuOptions>Concerts</viewModels:VideoMenuOptions>
+                                </AppBarButton.CommandParameter>
+                                <AppBarButton.Icon>
+                                    <FontIcon Glyph="C"/>
+                                </AppBarButton.Icon>
+                            </AppBarButton>
+                        </Grid>
+                    </Grid>
+                </DataTemplate>
+            </HubSection>
+            <HubSection 
+                Header="{Binding Path=Strings.HomeViewModel_Favorites, Source={StaticResource Strings},FallbackValue=Favorites, Mode=OneWay}"
+                IsHeaderInteractive="True">
+                <DataTemplate>
+                    <GridView 
+                        VerticalContentAlignment="Stretch"
+                        HorizontalContentAlignment="Stretch"
+                        ScrollViewer.VerticalScrollBarVisibility="Disabled"
+                        ItemsSource="{Binding FavoriteMedia}" 
+                        SelectionMode="None" 
+                        IsItemClickEnabled="True"
+                        common:ItemClickCommandBehavior.Command="{Binding ItemSelectedCommand}">
+                        <GridView.Resources>
+                            <ItemsPanelTemplate x:Key="PopularPanelItemsPanelTemplate">
+                                <ItemsStackPanel Orientation="Horizontal" />
+                            </ItemsPanelTemplate>
+                        </GridView.Resources>
+                        <GridView.Transitions>
+                            <TransitionCollection>
+                                <AddDeleteThemeTransition/>
+                                <EntranceThemeTransition/>
+                            </TransitionCollection>
+                        </GridView.Transitions>
+                        <GridView.FooterTransitions>
+                            <TransitionCollection>
+                                <AddDeleteThemeTransition/>
+                            </TransitionCollection>
+                        </GridView.FooterTransitions>
+                        <GridView.ItemTemplate>
+                            <StaticResource ResourceKey="PopularMediaItemDataTemplate"/>
+                        </GridView.ItemTemplate>
+                        <GridView.ItemsPanel>
+                            <StaticResource ResourceKey="PopularPanelItemsPanelTemplate"/>
+                        </GridView.ItemsPanel>
+                    </GridView>
+                </DataTemplate>
+            </HubSection>
+        </Hub>
+    </Grid>
+</views:BaseView>
+

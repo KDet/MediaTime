@@ -1,0 +1,4 @@
+\\psf\Home\Desktop\MediaTime\Application\MediaTime\MediaTime.Core\MediaTime.Core.csproj;neutral
+\\psf\Home\Desktop\MediaTime\Application\MediaTime\MediaTime.Localization\MediaTime.Localization.csproj;neutral
+\\psf\Home\Desktop\MediaTime\Application\MediaTime\MediaTime.Localization\MediaTime.Localization.csproj;neutral
+\\psf\Home\Desktop\MediaTime\Application\MediaTime\MediaTime.Win81\MediaTime.Win81.csproj;x86

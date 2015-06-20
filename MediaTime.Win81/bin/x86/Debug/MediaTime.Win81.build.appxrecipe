@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>DIMA2687</Machine>
+    <WindowsUser>dima</WindowsUser>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <SolutionConfiguration>Debug|x86</SolutionConfiguration>
+    <PackageArchitecture>x86</PackageArchitecture>
+    <PackageIdentityName>f2ef6460-6e43-45f9-b435-2a6884a93814</PackageIdentityName>
+    <IntermediateOutputPath>\\psf\Home\Desktop\MediaTime\Application\MediaTime\MediaTime.Win81\obj\x86\Debug\</IntermediateOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="\\psf\Home\Desktop\MediaTime\Application\MediaTime\MediaTime.Win81\bin\x86\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="\\psf\Home\Desktop\MediaTime\Application\MediaTime\MediaTime.Win81\bin\x86\Debug\MediaTime.Win81.exe">
+      <PackagePath>MediaTime.Win81.exe</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="\\psf\Home\Desktop\MediaTime\Application\MediaTime\packages\MvvmCross.HotTuna.CrossCore.3.1.1\lib\netcore45\Cirrious.CrossCore.dll">
+      <PackagePath>Cirrious.CrossCore.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="\\psf\Home\Desktop\MediaTime\Application\MediaTime\packages\MvvmCross.HotTuna.CrossCore.3.1.1\lib\netcore45\Cirrious.CrossCore.WindowsStore.dll">
+      <PackagePath>Cirrious.CrossCore.WindowsStore.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="\\psf\Home\Desktop\MediaTime\Application\MediaTime\packages\MvvmCross.Community.Plugin.Sqlite.3.1.1\lib\netcore45\Cirrious.MvvmCross.Community.Plugins.Sqlite.dll">
+      <PackagePath>Cirrious.MvvmCross.Community.Plugins.Sqlite.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="\\psf\Home\Desktop\MediaTime\Application\MediaTime\packages\MvvmCross.Community.Plugin.Sqlite.3.1.1\lib\netcore45\x86\Cirrious.MvvmCross.Community.Plugins.Sqlite.WindowsStore.dll">
+      <PackagePath>Cirrious.MvvmCross.Community.Plugins.Sqlite.WindowsStore.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="\\psf\Home\Desktop\MediaTime\Application\MediaTime\packages\MvvmCross.HotTuna.MvvmCrossLibraries.3.1.1\lib\netcore45\Cirrious.MvvmCross.dll">
+      <PackagePath>Cirrious.MvvmCross.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="\\psf\Home\Desktop\MediaTime\Application\MediaTime\packages\MvvmCross.HotTuna.CrossCore.3.1.1\lib\netcore45\Cirrious.MvvmCross.Localization.dll">
+      <PackagePath>Cirrious.MvvmCross.Localization.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="\\psf\Home\Desktop\MediaTime\Application\MediaTime\packages\MvvmCross.HotTuna.Plugin.DownloadCache.3.1.1\lib\portable-win+net45+sl50+wp8+MonoAndroid+MonoTouch\Cirrious.MvvmCross.Plugins.DownloadCache.dll">
+      <PackagePath>Cirrious.MvvmCross.Plugins.DownloadCache.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="\\psf\Home\Desktop\MediaTime\Application\MediaTime\packages\MvvmCross.HotTuna.Plugin.File.3.1.1\lib\netcore45\Cirrious.MvvmCross.Plugins.File.dll">
+      <PackagePath>Cirrious.MvvmCross.Plugins.File.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="\\psf\Home\Desktop\MediaTime\Application\MediaTime\packages\MvvmCross.HotTuna.Plugin.File.3.1.1\lib\netcore45\Cirrious.MvvmCross.Plugins.File.WindowsStore.dll">
+      <PackagePath>Cirrious.MvvmCross.Plugins.File.WindowsStore.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="\\psf\Home\Desktop\MediaTime\Application\MediaTime\packages\MvvmCross.HotTuna.Plugin.Json.3.1.1\lib\netcore45\Cirrious.MvvmCross.Plugins.Json.dll">
+      <PackagePath>Cirrious.MvvmCross.Plugins.Json.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="\\psf\Home\Desktop\MediaTime\Application\MediaTime\packages\MvvmCross.HotTuna.Plugin.JsonLocalisation.3.1.1\lib\netcore45\Cirrious.MvvmCross.Plugins.JsonLocalisation.dll">
+      <PackagePath>Cirrious.MvvmCross.Plugins.JsonLocalisation.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="\\psf\Home\Desktop\MediaTime\Application\MediaTime\packages\MvvmCross.HotTuna.Plugin.Messenger.3.1.1\lib\netcore45\Cirrious.MvvmCross.Plugins.Messenger.dll">
+      <PackagePath>Cirrious.MvvmCross.Plugins.Messenger.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="\\psf\Home\Desktop\MediaTime\Application\MediaTime\packages\MvvmCross.HotTuna.Plugin.Network.3.1.1\lib\netcore45\Cirrious.MvvmCross.Plugins.Network.dll">
+      <PackagePath>Cirrious.MvvmCross.Plugins.Network.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="\\psf\Home\Desktop\MediaTime\Application\MediaTime\packages\MvvmCross.HotTuna.Plugin.Network.3.1.1\lib\netcore45\Cirrious.MvvmCross.Plugins.Network.WindowsStore.dll">
+      <PackagePath>Cirrious.MvvmCross.Plugins.Network.WindowsStore.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="\\psf\Home\Desktop\MediaTime\Application\MediaTime\packages\MvvmCross.HotTuna.Plugin.ResourceLoader.3.1.1\lib\netcore45\Cirrious.MvvmCross.Plugins.ResourceLoader.dll">
+      <PackagePath>Cirrious.MvvmCross.Plugins.ResourceLoader.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="\\psf\Home\Desktop\MediaTime\Application\MediaTime\packages\MvvmCross.HotTuna.Plugin.ResourceLoader.3.1.1\lib\netcore45\Cirrious.MvvmCross.Plugins.ResourceLoader.WindowsStore.dll">
+      <PackagePath>Cirrious.MvvmCross.Plugins.ResourceLoader.WindowsStore.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="\\psf\Home\Desktop\MediaTime\Application\MediaTime\packages\MvvmCross.HotTuna.Plugin.WebBrowser.3.1.1\lib\netcore45\Cirrious.MvvmCross.Plugins.WebBrowser.dll">
+      <PackagePath>Cirrious.MvvmCross.Plugins.WebBrowser.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="\\psf\Home\Desktop\MediaTime\Application\MediaTime\packages\MvvmCross.HotTuna.Plugin.WebBrowser.3.1.1\lib\netcore45\Cirrious.MvvmCross.Plugins.WebBrowser.WindowsStore.dll">
+      <PackagePath>Cirrious.MvvmCross.Plugins.WebBrowser.WindowsStore.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="\\psf\Home\Desktop\MediaTime\Application\MediaTime\packages\MvvmCross.HotTuna.MvvmCrossLibraries.3.1.1\lib\netcore45\Cirrious.MvvmCross.WindowsStore.dll">
+      <PackagePath>Cirrious.MvvmCross.WindowsStore.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="\\psf\Home\Desktop\MediaTime\Application\MediaTime\MediaTime.Core\bin\Debug\MediaTime.Core.dll">
+      <PackagePath>MediaTime.Core.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="\\psf\Home\Desktop\MediaTime\Application\MediaTime\MediaTime.Localization\bin\Debug\MediaTime.Localization.dll">
+      <PackagePath>MediaTime.Localization.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="\\psf\Home\Desktop\MediaTime\Application\MediaTime\packages\MvvmCross.HotTuna.Plugin.Json.3.1.1\lib\netcore45\Newtonsoft.Json.dll">
+      <PackagePath>Newtonsoft.Json.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="\\psf\Home\Desktop\MediaTime\Application\MediaTime\packages\SQLite.Net.Async-PCL.2.3.0\lib\portable-net4+sl5+netcore45+wp8+MonoAndroid1+MonoTouch1\SQLite.Net.Async.dll">
+      <PackagePath>SQLite.Net.Async.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="\\psf\Home\Desktop\MediaTime\Application\MediaTime\packages\SQLite.Net-PCL.2.3.0\lib\portable-net4+sl5+netcore45+wp8+MonoAndroid1+MonoTouch1\SQLite.Net.dll">
+      <PackagePath>SQLite.Net.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="\\psf\Home\Desktop\MediaTime\Application\MediaTime\MediaTime.Core\bin\Debug\HtmlAgilityPack-PCL.dll">
+      <PackagePath>HtmlAgilityPack-PCL.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="\\psf\Home\Desktop\MediaTime\Application\MediaTime\MediaTime.Localization\bin\Debug\de-DE\MediaTime.Localization.resources.dll">
+      <PackagePath>de-DE\MediaTime.Localization.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="\\psf\Home\Desktop\MediaTime\Application\MediaTime\MediaTime.Win81\Assets\Background2x.jpg">
+      <PackagePath>Assets\Background2x.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="\\psf\Home\Desktop\MediaTime\Application\MediaTime\MediaTime.Win81\Assets\background2xefect.jpg">
+      <PackagePath>Assets\background2xefect.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="\\psf\Home\Desktop\MediaTime\Application\MediaTime\MediaTime.Win81\Assets\background2xlight.jpg">
+      <PackagePath>Assets\background2xlight.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="\\psf\Home\Desktop\MediaTime\Application\MediaTime\MediaTime.Win81\Assets\Background2x.png">
+      <PackagePath>Assets\Background2x.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="\\psf\Home\Desktop\MediaTime\Application\MediaTime\MediaTime.Win81\Assets\DarkGray.png">
+      <PackagePath>Assets\DarkGray.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="\\psf\Home\Desktop\MediaTime\Application\MediaTime\MediaTime.Win81\Assets\FsToLogo.png">
+      <PackagePath>Assets\FsToLogo.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="\\psf\Home\Desktop\MediaTime\Application\MediaTime\MediaTime.Win81\Assets\LightGray.png">
+      <PackagePath>Assets\LightGray.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="\\psf\Home\Desktop\MediaTime\Application\MediaTime\MediaTime.Win81\Assets\Logo.scale-100.png">
+      <PackagePath>Assets\Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="\\psf\Home\Desktop\MediaTime\Application\MediaTime\MediaTime.Win81\Assets\MediumGray.png">
+      <PackagePath>Assets\MediumGray.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="\\psf\Home\Desktop\MediaTime\Application\MediaTime\MediaTime.Win81\Assets\No_Poster.png">
+      <PackagePath>Assets\No_Poster.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="\\psf\Home\Desktop\MediaTime\Application\MediaTime\MediaTime.Win81\Assets\SmallLogo.scale-100.png">
+      <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="\\psf\Home\Desktop\MediaTime\Application\MediaTime\MediaTime.Win81\Assets\SplashScreen.scale-100.png">
+      <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="\\psf\Home\Desktop\MediaTime\Application\MediaTime\MediaTime.Win81\Assets\StoreLogo.scale-100.png">
+      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="\\psf\Home\Desktop\MediaTime\Application\MediaTime\MediaTime.Win81\Assets\testTitle.png">
+      <PackagePath>Assets\testTitle.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="\\psf\Home\Desktop\MediaTime\Application\MediaTime\MediaTime.Win81\Assets\ThumbsDown.png">
+      <PackagePath>Assets\ThumbsDown.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="\\psf\Home\Desktop\MediaTime\Application\MediaTime\MediaTime.Win81\Assets\ThumbsUp.png">
+      <PackagePath>Assets\ThumbsUp.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="\\psf\Home\Desktop\MediaTime\Application\MediaTime\MediaTime.Win81\Common\ReadMe.txt">
+      <PackagePath>Common\ReadMe.txt</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="\\psf\Home\Desktop\MediaTime\Application\MediaTime\MediaTime.Win81\ToDo-MvvmCross\_ Windows Store UI.txt">
+      <PackagePath>ToDo-MvvmCross\_ Windows Store UI.txt</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="\\psf\Home\Desktop\MediaTime\Application\MediaTime\MediaTime.Core\ToDo-MvvmCross\_ Core.txt">
+      <PackagePath>MediaTime.Core\ToDo-MvvmCross\_ Core.txt</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="\\psf\Home\Desktop\MediaTime\Application\MediaTime\MediaTime.Win81\bin\x86\Debug\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="\\psf\Home\Desktop\MediaTime\Application\MediaTime\MediaTime.Win81\bin\x86\Debug\Common\Templates.xbf">
+      <PackagePath>Common\Templates.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="\\psf\Home\Desktop\MediaTime\Application\MediaTime\MediaTime.Win81\bin\x86\Debug\Views\CategoryView.xbf">
+      <PackagePath>Views\CategoryView.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="\\psf\Home\Desktop\MediaTime\Application\MediaTime\MediaTime.Win81\bin\x86\Debug\Views\HomeView.xbf">
+      <PackagePath>Views\HomeView.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="\\psf\Home\Desktop\MediaTime\Application\MediaTime\MediaTime.Win81\bin\x86\Debug\Views\ItemPage.xbf">
+      <PackagePath>Views\ItemPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="\\psf\Home\Desktop\MediaTime\Application\MediaTime\MediaTime.Win81\bin\x86\Debug\Views\MediaItemView.xbf">
+      <PackagePath>Views\MediaItemView.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="\\psf\Home\Desktop\MediaTime\Application\MediaTime\MediaTime.Win81\bin\x86\Debug\Views\SectionPage.xbf">
+      <PackagePath>Views\SectionPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="\\psf\Home\Desktop\MediaTime\Application\MediaTime\MediaTime.Win81\bin\x86\Debug\MediaTime.Win81.xr.xml">
+      <PackagePath>MediaTime.Win81.xr.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="\\psf\Home\Desktop\MediaTime\Application\MediaTime\MediaTime.Win81\bin\x86\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.VCLibs\12.0\">
+      <Name>Microsoft.VCLibs.120.00.Debug</Name>
+      <Version>12.0.21005.1</Version>
+      <Architecture>ARM</Architecture>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.120.00.Debug, MinVersion = 12.0.21005.1</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.VCLibs\12.0\.\AppX\Debug\ARM\Microsoft.VCLibs.ARM.Debug.12.00.appx</AppxLocation>
+      <MoreInfo></MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.VCLibs\12.0\">
+      <Name>Microsoft.VCLibs.120.00.Debug</Name>
+      <Version>12.0.21005.1</Version>
+      <Architecture>x64</Architecture>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.120.00.Debug, MinVersion = 12.0.21005.1</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.VCLibs\12.0\.\AppX\Debug\x64\Microsoft.VCLibs.x64.Debug.12.00.appx</AppxLocation>
+      <MoreInfo></MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.VCLibs\12.0\">
+      <Name>Microsoft.VCLibs.120.00.Debug</Name>
+      <Version>12.0.21005.1</Version>
+      <Architecture>x86</Architecture>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.120.00.Debug, MinVersion = 12.0.21005.1</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.VCLibs\12.0\.\AppX\Debug\x86\Microsoft.VCLibs.x86.Debug.12.00.appx</AppxLocation>
+      <MoreInfo></MoreInfo>
+    </ResolvedSDKReference>
+  </ItemGroup>
+</Project>
