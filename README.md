@@ -1,4 +1,2 @@
 # MediaTime
-Xamarin: [fs.to](http://fs.to/) site parser using MvvmCross
-
-
+Xamarin: [fs.to](http://fs.to/) site parser to test usage of MvvmCross
